@@ -62,8 +62,10 @@ when everything is ready:
 python spleeter_entry.py train -p path/to/spleeter_config.json -d path/to/datasets --verbose
 ```
 
-## 
+## Result
+Results for different optimizers are saved in `spleeter-results` directory `spleeter_parse_data.ipynb` provides data parsing functions and graphing functions for data parsing and visualization.
 
+Graphs can be also found in the `img` directory.
 
 ---
 
