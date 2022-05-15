@@ -28,7 +28,7 @@ Jupyter notebooks for ploting validation results:
 
 ## Experiment results
 
-SVoice:
+### SVoice
 
 - Adam yields the best results among gradient descent optimizers
 - Plateau learning rate (decay when a metric stops improving) scheduler with Adam works better than StepLR (step-wise decay)
