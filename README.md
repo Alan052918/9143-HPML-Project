@@ -3,14 +3,18 @@
 - Project title: Voice Separation and Optimization in Recurrent Neural Networks
 - Team members: Leo Hu, Junda Ai
 
----
+## Introduction
 
-# Spleeter
+In this project we looked into two state-of-the-art voice separation model implementations, and anaylzed the effects of different optimization algorithms and techniques on them.
+
+## Spleeter
 
 An optimizer modification of [Spleeter by deezer](https://github.com/deezer/spleeter/)
 
-## Installation
+### Installation
+
 Environment
+
 ```
 # Install media/file dependencies using conda
 conda install -c conda-forge ffmpeg libsndfile
@@ -25,6 +29,7 @@ poetry run pytest tests/
 ```
 
 To enable GPU
+
 ```
 # Uninstall CPU tensorflow
 pip uninstall tensorflow
@@ -33,8 +38,9 @@ pip install tensorflow-gpu==2.5.0
 ```
 
 Modification
+
 ```
-# Replace spleeter/model/__init__.py with __init__.py in spleeter_mod 
+# Replace spleeter/model/__init__.py with __init__.py in spleeter_mod
 # Replace spleeter/__main__.py with __main__.py in spleeter_mod
 # Place spleeter_entry.py in base directory
 
@@ -47,22 +53,26 @@ Modification Base/
 ```
 
 Preparation
+
 ```
 # prepare the dataset: MUSDB18-HQ is used
 # prepare the csv: based on dataset used
 # modify the config: modify the links in the config file
 ```
 
-## Training
+### Training
+
 - To test different optimizers, modify the `optimizer` item in the config file
 - Logging frequency can be specified in `__main__.py`
 
 when everything is ready:
+
 ```
 python spleeter_entry.py train -p path/to/spleeter_config.json -d path/to/datasets --verbose
 ```
 
-## Result
+### Result
+
 Results for different optimizers are saved in [spleeter-results](spleeter-results) directory. `spleeter_parse_data.ipynb` provides data parsing functions and graphing functions for data parsing and visualization.
 
 Training Loss of first 8 steps using different optimizers:
@@ -73,13 +83,7 @@ More graphs can be found in the [img](img) directory.
 
 ---
 
-
-# Svoice
-## Introduction
-
-In this project we looked into two state-of-the-art voice separation model implementations, and anaylzed the effects of different optimization algorithms and techniques on them.
-
-### SVoice
+## SVoice
 
 [SVoice: Speaker Voice Separation using Neural Nets](https://github.com/facebookresearch/svoice)
 
@@ -88,7 +92,7 @@ In this project we looked into two state-of-the-art voice separation model imple
 - Adam optimizer
 - Gradient clipping
 
-## Getting started
+### Getting started
 
 [SVoice experiment](https://colab.research.google.com/drive/1B1cNeMLSL0KVs-Am1dKA5_F4E6k474_d#scrollTo=9DPpT3KiFTn2) was carried out on Google Colab.
 
@@ -98,9 +102,9 @@ Jupyter notebooks for ploting validation results:
 - [svoice_lr_schl](svoice_lr_schl.ipynb)
 - [svoice_optim](svoice_optim.ipynb)
 
-## Experiment results
+### Results
 
-### SVoice
+Please find all the training outputs in [svoice-results](Alan052918/9143-HPML-Project/tree/main/svoice-results)
 
 - Adam yields the best results among gradient descent optimizers
 - Plateau learning rate (decay when a metric stops improving) scheduler with Adam works better than StepLR (step-wise decay)
