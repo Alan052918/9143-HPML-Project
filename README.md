@@ -3,7 +3,6 @@
 - Project title: Voice Separation and Optimization in Recurrent Neural Networks
 - Team members: Leo Hu, Junda Ai
 
-<<<<<<< HEAD
 ---
 
 # Spleeter
@@ -70,7 +69,6 @@ python spleeter_entry.py train -p path/to/spleeter_config.json -d path/to/datase
 
 
 # Svoice
-=======
 ## Introduction
 
 In this project we looked into two state-of-the-art voice separation model implementations, and anaylzed the effects of different optimization algorithms and techniques on them.
@@ -86,7 +84,6 @@ In this project we looked into two state-of-the-art voice separation model imple
 
 ## Getting started
 
->>>>>>> 1af0b259a90c805e41f9d4a6326d83702ce9c5db
 [SVoice experiment](https://colab.research.google.com/drive/1B1cNeMLSL0KVs-Am1dKA5_F4E6k474_d#scrollTo=9DPpT3KiFTn2) was carried out on Google Colab.
 
 Jupyter notebooks for ploting validation results:
