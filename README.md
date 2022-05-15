@@ -7,9 +7,24 @@
 
 In this project we looked into two state-of-the-art voice separation model implementations, and anaylzed the effects of different optimization algorithms and techniques on them.
 
+### SVoice
+
+[SVoice: Speaker Voice Separation using Neural Nets](https://github.com/facebookresearch/svoice)
+
+- [Hydra](https://hydra.cc/) to manage training configurations
+- Custom implementation of [SI-SNR](https://arxiv.org/abs/1711.00541) loss function
+- Adam optimizer
+- Gradient clipping
+
 ## Getting started
 
 [SVoice experiment](https://colab.research.google.com/drive/1B1cNeMLSL0KVs-Am1dKA5_F4E6k474_d#scrollTo=9DPpT3KiFTn2) was carried out on Google Colab.
+
+Jupyter notebooks for ploting validation results:
+
+- [svoice_grad_clip](svoice_grad_clip.ipynb)
+- [svoice_lr_schl](svoice_lr_schl.ipynb)
+- [svoice_optim](svoice_optim.ipynb)
 
 ## Experiment results
 
